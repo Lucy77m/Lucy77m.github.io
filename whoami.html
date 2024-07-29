@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whoami?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="src/favicon2.ico" type="image/x-icon"> 
+</head>
+<body>
+    <footer class="footer">
+        <img src="src/L.png" alt="L Logo" class="footer-logo">
+        <p>Copylight © 2024.07.23 ~ Today Lucy77m<br>This site was made with HTML, JavaScript, and CSS. (temporary server : Python)</p>
+    </footer>
+    <div class="header">
+        <a href="#" class="header-text" id="hi-text">Hi!</a>
+        <div class="header-item">
+            <a href="#" class="header-text" id="whoami-text">Whoami?</a>
+            <div class="subtext">☝</div>
+        </div>
+    </div>
+
+    <div class="central-text">
+        <p></p>
+    </div>
+
+    <a href="index.html" class="left-corner" id="left-corner">❬</a> 
+
+    <div class="logos">
+        <a href="https://github.com/Lucy77m" target="_blank">
+            <img src="src/github.png" alt="GitHub" class="github-logo"> <!-- GitHub 로고 -->
+        </a>
+        <a href="https://discord.com/users/868361472043003934" target="_blank">
+            <img src="src/discord.png" alt="Discord" class="discord-logo"> <!-- Discord -->
+        </a>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            const modeIcon = document.querySelector('.mode i');
+
+            if (localStorage.getItem('darkMode') === "true") {
+                body.classList.add('dark-mode');
+                modeIcon.classList.remove('icon-light-mode');
+                modeIcon.classList.add('icon-dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                modeIcon.classList.remove('icon-dark-mode');
+                modeIcon.classList.add('icon-light-mode');
+            }
+        });
+    </script>
+</body>
+</html>
